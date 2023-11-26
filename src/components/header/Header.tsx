@@ -1,3 +1,6 @@
+'use client';
+
+import { useCallback, useEffect, useState } from "react";
 import  Image  from "next/image";
 import Link from "next/link";
 import { X, Menu } from 'lucide-react';
@@ -6,8 +9,34 @@ import "./header.css";
 
 
 const Header = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isHeaderActive, setIsHeaderActive] = useState(false);
+
+ const toggleSidebar =  useCallback(
+    () => {
+      setIsSidebarOpen(!isSidebarOpen)
+    },
+    [isSidebarOpen],
+  )
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsHeaderActive(true);
+      } else {
+        setIsHeaderActive(false);
+      }
+
+    }
+      window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+  
+
   return ( 
-    <header className="header">
+    <header className={`header ${isHeaderActive ? 'active' : ''} `}>
       <div className="container">
 
         <Link href="/" className="logo"> 
@@ -19,7 +48,7 @@ const Header = () => {
           />
         </Link>
 
-        <nav className="navbar active">
+        <nav className={`navbar ${isSidebarOpen && 'active'}`}>
 
           <div className="navbar-top">
             <Link href="/" className="logo"> 
@@ -31,7 +60,7 @@ const Header = () => {
               />
             </Link>
 
-            <button className="nav-toggle-btn" aria-label="close menu">
+            <button onClick={toggleSidebar} className="nav-toggle-btn" aria-label="close menu">
               <X />
             </button>
           </div>
@@ -63,11 +92,11 @@ const Header = () => {
 
         </nav>
 
-        <button className="nav-toggle-btn" aria-label="open menu">
+        <button onClick={toggleSidebar} className="nav-toggle-btn" aria-label="open menu">
           <Menu size={27}/>
         </button>
 
-        <div className="overlay" aria-hidden="true" ></div>
+        <div className={`overlay ${isSidebarOpen ? 'active' : ''} `} aria-hidden="true" ></div>
 
       </div>
     </header>
