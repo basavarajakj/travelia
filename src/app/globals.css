@@ -144,5 +144,54 @@ body {
 
 
 /*----------------------------*\
- #BASE
+ #REUSED STYLE
 \*----------------------------*/
+
+.container { padding-inline: 16px; }
+
+.btn {
+  height: 50px;
+  color: var(--text-white);
+  padding-inline: 30px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  max-width: max-content;
+  transition: var(--transition-1);
+}
+
+.btn-primary { background-color: var(--bg-majorelle-blue); }
+
+.btn-primary:where(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue);
+  box-shadow: var(--shadow-2);
+}
+
+.btn-secondary {
+  background-color: var(--bg-red-salsa);
+}
+
+.btn-secondary:where(:hover, :focus-visible) {
+  background-color: var(--bg-english-vermillion);
+  box-shadow: var(--shadow-3);
+}
+
+
+.overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ background-color: var(--bg-white);
+ opacity: 0;
+ visibility: hidden;
+ transition: var(--transition-1); 
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 0.5;
+}

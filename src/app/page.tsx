@@ -1,8 +1,12 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Header from '@/components/header/Header'
+import Preloader from '@/components/preloader/Preloader'
 
 export default function Home() {
   return (
-    <h1>Travelia - Explore the world</h1>
+    <>
+      <Preloader /> 
+      <Header />
+      
+    </> 
   )
 }
