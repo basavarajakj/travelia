@@ -236,3 +236,19 @@ body {
 .w-100 {
   width: 100%;
 }
+
+.section-subtitle {
+  color: var(--text-majorelle-blue);
+  text-transform: uppercase;
+  font-weight: var(--weight-medium);
+}
+
+.section-title {
+  margin-block: 10px;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--bg-gainsboro);
+  overflow: hidden;
+}
