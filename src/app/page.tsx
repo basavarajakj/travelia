@@ -1,4 +1,6 @@
 import Destination from '@/components/destination/Destination'
+import Experience from '@/components/experience/Experience'
+import Gallery from '@/components/gallery/Gallery'
 import Header from '@/components/header/Header'
 import Hero from '@/components/hero/Hero'
 import Preloader from '@/components/preloader/Preloader'
@@ -12,6 +14,8 @@ export default function Home() {
       <Hero />
       <Service />
       <Destination />
+      <Experience />
+      <Gallery />
     </> 
   )
 }
