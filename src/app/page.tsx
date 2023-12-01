@@ -1,3 +1,4 @@
+import CTA from '@/components/cta/Cta'
 import Destination from '@/components/destination/Destination'
 import Experience from '@/components/experience/Experience'
 import Gallery from '@/components/gallery/Gallery'
@@ -16,6 +17,7 @@ export default function Home() {
       <Destination />
       <Experience />
       <Gallery />
+      <CTA />
     </> 
   )
 }
