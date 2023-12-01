@@ -1,6 +1,7 @@
 import CTA from '@/components/cta/Cta'
 import Destination from '@/components/destination/Destination'
 import Experience from '@/components/experience/Experience'
+import Footer from '@/components/footer/Footer'
 import Gallery from '@/components/gallery/Gallery'
 import Header from '@/components/header/Header'
 import Hero from '@/components/hero/Hero'
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience />
       <Gallery />
       <CTA />
+      <Footer />
     </> 
   )
 }
