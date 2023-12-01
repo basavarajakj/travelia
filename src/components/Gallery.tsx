@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import './gallery.css';
-
 const Gallery = () => {
   return ( 
     <section className="section gallery">

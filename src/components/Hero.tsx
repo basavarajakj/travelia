@@ -2,8 +2,6 @@ import { ChevronRight, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import './hero.css';
-
 const Hero = () => {
   return ( 
     <main>

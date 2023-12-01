@@ -6,8 +6,6 @@ import { FaMeta } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
-import "./footer.css";
-
 const Footer = () => {
   return (
     <footer className="footer">

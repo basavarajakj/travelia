@@ -1,10 +1,9 @@
 import Image from "next/image";
 
-import './experience.css';
 
 const Experience = () => {
   return ( 
-    <section className="section exe" aria-label="experience section"> 
+    <section className="section exp" aria-label="experience section"> 
       <div className="container">
 
         <div className="exp-content">

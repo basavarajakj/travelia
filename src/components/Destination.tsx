@@ -1,9 +1,7 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { DESTINATIONS_DETAILS } from "../constant";
-
-import './destination.css';
+import { DESTINATIONS_DETAILS } from "./constant";
 
 const Destination = () => {
   return (

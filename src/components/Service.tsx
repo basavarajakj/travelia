@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import './service.css';
-
 const Service = () => {
   return (
     <section className="section service" aria-label="service">

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import './cta.css';
-
 const CTA = () => {
   return ( 
     <section className="section cta" aria-label="call to action">

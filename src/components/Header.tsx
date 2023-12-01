@@ -5,8 +5,6 @@ import  Image  from "next/image";
 import Link from "next/link";
 import { X, Menu } from 'lucide-react';
 
-import "./header.css";
-
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

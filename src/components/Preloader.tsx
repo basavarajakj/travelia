@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import "./preloader.css";
 
 const Preloader = () => {
   const [preloader, setPreloader] = useState(false);
